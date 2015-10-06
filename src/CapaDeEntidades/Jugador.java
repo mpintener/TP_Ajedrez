@@ -1,20 +1,8 @@
 package CapaDeEntidades;
 
-import java.util.ArrayList;
-
 public class Jugador
 {
 	private String dni,apellido,nombre;
-	
-	private ArrayList<Partida> partidas = new ArrayList<Partida>();
-	
-	public ArrayList<Partida> getPartidas() {
-		return partidas;
-	}
-
-	public void setPartidas(ArrayList<Partida> partidas) {
-		this.partidas = partidas;
-	}
 
 	public String getDni() {
 		return dni;

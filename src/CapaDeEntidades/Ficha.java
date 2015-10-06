@@ -1,20 +1,27 @@
 package CapaDeEntidades;
 
 public abstract class Ficha 
-{	
+{
+	private int fila;
+	
+	private String columna;
+	
 	private boolean estado;
-	
-	public enum Color{Blanco,Negro};
-	
-	private Posicion posicion;
 
-	
-	public Posicion getPosicion() {
-		return posicion;
+	public int getFila() {
+		return fila;
 	}
 
-	public void setPosicion(Posicion posicion) {
-		this.posicion = posicion;
+	public void setFila(int fila) {
+		this.fila = fila;
+	}
+
+	public String getColumna() {
+		return columna;
+	}
+
+	public void setColumna(String columna) {
+		this.columna = columna;
 	}
 
 	public boolean isEstado() {

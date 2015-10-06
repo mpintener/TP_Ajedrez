@@ -2,28 +2,19 @@ package CapaDePresentación;
 
 import java.awt.EventQueue;
 
-import CapaDeEntidades.Ficha;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-
-import CapaDeEntidades.Ficha.Color;
-import CapaDeNegocio.CtrlAjedrez;
-
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 
-public class AjedrezPartida {
+public class ABMPartida {
 
 	private JFrame frame;
 	private JTextField txtPosicionInicial;
 	private JTextField txtPosicionFinal;
-	private JLabel lblColorJugador;
 
-	private CtrlAjedrez ctrlAjedrez = new CtrlAjedrez();
-	
 	/**
 	 * Launch the application.
 	 */
@@ -31,7 +22,7 @@ public class AjedrezPartida {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					AjedrezPartida window = new AjedrezPartida();
+					ABMPartida window = new ABMPartida();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -44,7 +35,7 @@ public class AjedrezPartida {
 	/**
 	 * Create the application.
 	 */
-	public AjedrezPartida() {
+	public ABMPartida() {
 		initialize();
 	}
 
@@ -95,17 +86,5 @@ public class AjedrezPartida {
 		JButton btnGuardar = new JButton("Guardar");
 		btnGuardar.setBounds(199, 247, 89, 23);
 		frame.getContentPane().add(btnGuardar);
-		
-		lblColorJugador = new JLabel("");
-		lblColorJugador.setBounds(85, 27, 46, 14);
-		frame.getContentPane().add(lblColorJugador);
 	}
-	
-	private void setJugador(String color){
-	
-		this.lblColorJugador.setText(color);
-	
-	}
-	
-	
 }
